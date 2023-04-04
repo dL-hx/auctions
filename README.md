@@ -2,27 +2,54 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
-## Development server
+#
+https://plugins.zhile.io/files/ide-eval-resetter-2.1.6.zip
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng -v
+@angular/cli: 1.3.2
+node: 8.3.0
+npm: 5.3.0
+os: win32 x64
 
-## Code scaffolding
+```shell
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+卸载老版本： 
+npm uninstall -g angular-cli 
+npm uninstall –save-dev angular-cli 
+卸载新版本： 
+npm uninstall -g @angular/cli 
+清除下缓存 
+npm cache clean
+```
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 
 
-## Running end-to-end tests
+```shell
+$ 
+$ npm i -g @angular/cli@1.3.2
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+```shell
+$ ng -v
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```shell
+$ ng new auction
+```
+
+```
+@NgModule {
+declarations:{},// 组件,指令,管道
+imports:[], // 引入的依赖
+providers:[],// 服务
+bootstrap:[]// 主要的模块
+}
+```
+
+
+
+
