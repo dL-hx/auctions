@@ -5,11 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 #
 https://plugins.zhile.io/files/ide-eval-resetter-2.1.6.zip
 
+```
 ng -v
 @angular/cli: 1.3.2
 node: 8.3.0
 npm: 5.3.0
 os: win32 x64
+```
 
 ```shell
 
