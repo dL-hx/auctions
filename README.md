@@ -1,8 +1,8 @@
-# Auctions
+### Auctions
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
-#
+
 https://plugins.zhile.io/files/ide-eval-resetter-2.1.6.zip
 
 ```
@@ -26,8 +26,6 @@ npm cache clean
 
 
 
-
-# 
 
 ```shell
 $ 
@@ -55,3 +53,18 @@ bootstrap:[]// 主要的模块
 
 
 
+### 安装第三方库
+```sheLL
+$  npm i jquery@3.2.1 bootstrap@3.3.7 --save
+$  npm i @types/jquery@3.2.16 @types/bootstrap --save-dev
+```
+
+组件化开发(创建页面)
+```shell
+$ ng g component navbar
+$ ng g component footer
+$ ng g component search
+$ ng g component carousel
+$ ng g component product
+$ ng g component stars
+```

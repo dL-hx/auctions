@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+// @ts-ignore
+// import $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Mooc 网 Angular入门实战';
+
+  // 声明方法
+  test() {
+    // $('xxxx').show();
+  }
 }

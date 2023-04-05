@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/*全局css样式文件*/
+body{
+  padding-top: 70px;
+}
