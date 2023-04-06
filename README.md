@@ -68,3 +68,46 @@ $ ng g component carousel
 $ ng g component product
 $ ng g component stars
 ```
+
+### 搜索图形占位服务
+> https://temp.im/800x300
+
+### 指令
+ngFor
+
+###
+```angular2html
+标签绑定 {{}}
+<h4 class="pull-right">{{product.price}}</h4>
+
+属性绑定
+<img [src]="imgUrl" alt="">
+
+显示有的空心有的实心 动态样式绑定
+<span *ngFor="let star of stars" class="glyphicon glyphicon-star"
+      [class.glyphicon-star-empty]="star"
+>
+
+注入属性@Input,组件的参数传递
+
+  : 表示 Star组件中rating 值由 product.rating 传入.
+      <app-stars [rating]="product.rating"></app-stars>
+
+export class StarsComponent implements OnInit {
+  @Input()
+  private rating: number = 0;
+}
+```
+### 区别
+ang: 数据驱动
+jq:操作dom,插入模板
+
+### 小结
+```angular2html
+Ang 程序架构
+开发环境
+Auction 第一个版本
+```
+
+### 路由
+...
