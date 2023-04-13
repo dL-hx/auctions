@@ -53,7 +53,7 @@ bootstrap:[]// 主要的模块
 
 
 
-### 安装第三方库
+### 一. 安装第三方库
 ```sheLL
 $  npm i jquery@3.2.1 bootstrap@3.3.7 --save
 $  npm i @types/jquery@3.2.16 @types/bootstrap --save-dev
@@ -72,7 +72,7 @@ $ ng g component stars
 ### 搜索图形占位服务
 > https://temp.im/800x300
 
-### 指令
+### 二.指令
 ngFor
 
 ###
@@ -109,7 +109,7 @@ Ang 程序架构
 Auction 第一个版本
 ```
 
-### 路由
+### 三.路由
 https://blog.csdn.net/changyinling520/article/details/77856933
 ...
 用来跳转页面
@@ -136,4 +136,26 @@ resolve守卫
 
 ```
 3-4
-### 依赖注入
+### 四.依赖注入
+1.依赖注入: DI, 依赖注入,IOC 控制反转
+2.依赖注入:注入器与提供器
+3.层级 
+![ang7.png](src%2Fassets%2Fang7.png)
+![ang8.png](src%2Fassets%2Fang8.png)
+
+```shell
+$ ng g service shared/product
+```
+
+小结
+
+```
+介绍依赖注入以及要解决的问题
+用依赖注入的好处
+讲解ang框架提供器的各种配置, + 介绍注入器以及注入器的各种关系
+优化在线竞拍程序
+```
+
+
+模块.组件,路由,依赖注入
+### 五.数据绑定,响应式编程(RxJS), 管道
