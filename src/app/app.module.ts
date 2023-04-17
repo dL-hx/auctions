@@ -14,6 +14,10 @@ import {HomeComponent} from './home/home.component';
 
 import {Routes, RouterModule} from '@angular/router';
 import {ProductService} from './shared/product.service';
+import { MultiplePipe } from './pipe/multiple.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { FilterPipe } from './pipe/filter.pipe';
 // 使用路由配置
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
@@ -30,11 +34,17 @@ const routeConfig: Routes = [
     ProductComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    MultiplePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(routeConfig),
+    // 引入响应式编程模块
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
