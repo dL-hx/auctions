@@ -337,4 +337,74 @@ $  ng g pipe pipe/filter
 
 
 
-### 六.组件间的通信
+### 六.组件间的通信,传递数据
+![ang13.3.png](src%2Fassets%2Fang13.3.png)
+
+##### 1.1 组件的输入属性
+
+核心是组件,组件树,
+设计时候是松耦合.(依赖注入,...)
+
+#### 1. 组件的输入输出属性(父-子关系传递数据)
+组件(黑盒子模型), 输出属性暴露事件
+
+##### 1.1 组件的输入属性
+`组件的输入属性`:(子组件)被@Input装饰器注解的属性,用来从父组件接收数据
+```html
+<input type="text" placeholder="xxx" [(ngModel)]="stock">
+<sub-app [stockCode]="stock" [amount]="100"></sub-app>
+stock = ''
+---
+@Input
+stockCode:string;
+
+```
+
+* 注入属性:有父子关系的两组件传递数据
+* 路由关系: 注入路由函数传递参数(参数订阅/参数快照传递数据)
+##### 1.2 组件的输出属性
+```ts
+// 1.子组件向外输出数据,    PriceQuote: 向外输出数据的类型
+@Output('priceChange')----------- priceChange属性可以省略, priceChange 属性表示可以修改组件的属性的名称
+lastPrice:EventEmitter<PriceQuote> = new EventEmitter();
+
+constructor(){
+  let PriceQuote = {name:'xxx', price:111}
+  this.lastPrice.emit(priceQuote) // 2. 通过emit方法向外发生数据
+}
+-----------
+父组件接收子组件发射来的数据
+priceQuote:PriceQuote = new PriceQuote("", 0) //定义数据,接收数据
+
+app.html, 定义方法接收数据
+<app-price-quote (lastPrice)="priceQuoteHandler()"></app-price-quote>
+<div>
+name: {{priceQuote.name}}
+price: {{priceQuote.price}}
+
+</div>
+app.ts,   event 类型是子组件发射回来的数据类型
+priceQuoteHandler(event:PriceQuote){
+  this.priceQuote = event
+}
+
+
+
+
+```
+
+EventEmit 发布自定义事件
+
+
+![ang14.png](src%2Fassets%2Fang14.png)
+
+
+#### 2. 中间人模式, (无父子关系传递数据)
+
+松耦合实现, 将输入传递到兄弟公共的父组件,(没有这种关系,传递到服务,作为中间人)
+
+![ang15.png](src%2Fassets%2Fang15.png)
+
+#### 3. 组件生命周期以及angular 的变化发现机制
+
+
